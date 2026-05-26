@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual QA Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Manual QA Portfolio home">
+            <span class="brand-mark">QA</span>
+            <span>Manual QA Portfolio</span>
+        </a>
+        <nav class="main-nav" aria-label="Primary navigation">
+            <a href="#frontend">Frontend</a>
+            <a href="#backend">Backend</a>
+            <a href="#testing">Testing</a>
+            <a href="#workflow">Workflow</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero section-reveal" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow">QA learning project</p>
+                <h1>Manual QA Portfolio</h1>
+                <p class="hero-text">
+                    A practice project that shows frontend checks, backend API thinking,
+                    and automated tests in one clean learning portfolio.
+                </p>
+                <div class="hero-actions" aria-label="Project actions">
+                    <a class="button primary" href="#testing">View tests</a>
+                    <a class="button secondary" href="#workflow">See workflow</a>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-label="Project quality dashboard">
+                <div class="dashboard-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="metric">
+                        <strong data-count="5">0</strong>
+                        <span>tests</span>
+                    </div>
+                    <div class="metric">
+                        <strong data-count="3">0</strong>
+                        <span>layers</span>
+                    </div>
+                    <div class="metric">
+                        <strong data-count="1">0</strong>
+                        <span>portfolio</span>
+                    </div>
+                </div>
+                <div class="pipeline">
+                    <span class="active">Plan</span>
+                    <span class="active">Test</span>
+                    <span>Report</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-band section-reveal" id="frontend">
+            <div class="section-heading">
+                <p class="eyebrow">Frontend part</p>
+                <h2>User interface checks</h2>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <span class="icon">UI</span>
+                    <h3>Layout</h3>
+                    <p>Check that the page is readable, responsive, and visually consistent.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="icon">UX</span>
+                    <h3>Interaction</h3>
+                    <p>Validate buttons, navigation links, forms, and user flows.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="icon">A11Y</span>
+                    <h3>Accessibility</h3>
+                    <p>Review contrast, semantic HTML, labels, focus states, and keyboard usage.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-band alt section-reveal" id="backend">
+            <div class="section-heading">
+                <p class="eyebrow">Backend part</p>
+                <h2>API and data checks</h2>
+            </div>
+            <div class="split-layout">
+                <div class="api-panel">
+                    <div class="api-line ok">
+                        <span>GET /health</span>
+                        <strong>200 OK</strong>
+                    </div>
+                    <div class="api-line ok">
+                        <span>POST /login</span>
+                        <strong>validated</strong>
+                    </div>
+                    <div class="api-line warn">
+                        <span>POST /payment</span>
+                        <strong>edge cases</strong>
+                    </div>
+                    <div class="api-line fail">
+                        <span>GET /missing</span>
+                        <strong>404 tested</strong>
+                    </div>
+                </div>
+                <div class="text-block">
+                    <h3>What I test on backend</h3>
+                    <p>
+                        Status codes, error messages, validation rules, response structure,
+                        required fields, and negative scenarios.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-band section-reveal" id="testing">
+            <div class="section-heading">
+                <p class="eyebrow">Testing part</p>
+                <h2>Automated checks with Jest</h2>
+            </div>
+            <div class="test-list">
+                <article>
+                    <span class="status pass"></span>
+                    <div>
+                        <h3>add()</h3>
+                        <p>Checks that two numbers are added correctly.</p>
+                    </div>
+                </article>
+                <article>
+                    <span class="status pass"></span>
+                    <div>
+                        <h3>subtract()</h3>
+                        <p>Checks positive and negative results.</p>
+                    </div>
+                </article>
+                <article>
+                    <span class="status pass"></span>
+                    <div>
+                        <h3>divide()</h3>
+                        <p>Checks normal division and division by zero error handling.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="workflow section-reveal" id="workflow">
+            <div class="section-heading">
+                <p class="eyebrow">Study workflow</p>
+                <h2>From requirement to bug report</h2>
+            </div>
+            <div class="timeline">
+                <button class="step is-active" type="button" data-step="Analyze">Analyze</button>
+                <button class="step" type="button" data-step="Design">Design</button>
+                <button class="step" type="button" data-step="Execute">Execute</button>
+                <button class="step" type="button" data-step="Report">Report</button>
+            </div>
+            <p class="workflow-note" id="workflow-note">
+                Read requirements and define what should be tested first.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span>Manual QA Portfolio</span>
+        <span>Frontend + Backend + Testing practice</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

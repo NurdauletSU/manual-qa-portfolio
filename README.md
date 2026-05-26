@@ -6,10 +6,15 @@ Learning portfolio project for practicing TypeScript, Jest, and basic automated 
 
 This repository is part of my QA learning path. It contains simple TypeScript utility functions and unit tests that verify expected behavior.
 
+It also includes a frontend portfolio page with animated sections for frontend checks, backend checks, and testing workflow.
+
 ## What Is Inside
 
 - `src/utils.ts` - math utility functions: add, subtract, multiply, and divide.
 - `tests/example.test.ts` - Jest unit tests for the utility functions.
+- `new-project/src/index.html` - animated portfolio page.
+- `new-project/src/styles.css` - responsive frontend design.
+- `new-project/src/script.js` - page animations and workflow interaction.
 - `jest.config.js` - Jest configuration for TypeScript tests.
 - `tsconfig.json` - TypeScript configuration.
 
@@ -43,6 +48,12 @@ Watch tests while learning:
 
 ```bash
 npm run test:watch
+```
+
+Open the frontend portfolio page:
+
+```bash
+new-project/src/index.html
 ```
 
 ## Test Coverage
