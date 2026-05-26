@@ -1,41 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual QA Portfolio</title>
+    <title>Портфолио Manual QA</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="site-header">
-        <a class="brand" href="#home" aria-label="Manual QA Portfolio home">
+        <a class="brand" href="#home" aria-label="Главная страница портфолио">
             <span class="brand-mark">QA</span>
-            <span>Manual QA Portfolio</span>
+            <span>Портфолио Manual QA</span>
         </a>
-        <nav class="main-nav" aria-label="Primary navigation">
-            <a href="#frontend">Frontend</a>
-            <a href="#backend">Backend</a>
-            <a href="#testing">Testing</a>
-            <a href="#workflow">Workflow</a>
+        <nav class="main-nav" aria-label="Основная навигация">
+            <a href="#frontend">Фронтенд</a>
+            <a href="#backend">Бэкенд</a>
+            <a href="#testing">Тестирование</a>
+            <a href="#lab">QA-лаборатория</a>
         </nav>
+        <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Переключить тему">
+            <span>Тема</span>
+        </button>
     </header>
 
     <main>
         <section class="hero section-reveal" id="home">
             <div class="hero-copy">
-                <p class="eyebrow">QA learning project</p>
-                <h1>Manual QA Portfolio</h1>
+                <p class="eyebrow">Учебный QA-проект</p>
+                <h1>Портфолио Manual QA</h1>
                 <p class="hero-text">
-                    A practice project that shows frontend checks, backend API thinking,
-                    and automated tests in one clean learning portfolio.
+                    Практический проект для изучения ручного тестирования, базовой автоматизации,
+                    проверки интерфейса, API-логики и оформления баг-репортов.
                 </p>
-                <div class="hero-actions" aria-label="Project actions">
-                    <a class="button primary" href="#testing">View tests</a>
-                    <a class="button secondary" href="#workflow">See workflow</a>
+                <div class="hero-actions" aria-label="Действия проекта">
+                    <a class="button primary" href="#lab">Открыть QA-лабораторию</a>
+                    <a class="button secondary" href="#testing">Посмотреть тесты</a>
                 </div>
             </div>
 
-            <div class="hero-visual" aria-label="Project quality dashboard">
+            <div class="hero-visual" aria-label="Панель качества проекта">
                 <div class="dashboard-top">
                     <span></span>
                     <span></span>
@@ -44,53 +47,53 @@
                 <div class="dashboard-grid">
                     <div class="metric">
                         <strong data-count="5">0</strong>
-                        <span>tests</span>
+                        <span>автотестов</span>
                     </div>
                     <div class="metric">
-                        <strong data-count="3">0</strong>
-                        <span>layers</span>
+                        <strong data-count="4">0</strong>
+                        <span>раздела</span>
                     </div>
                     <div class="metric">
-                        <strong data-count="1">0</strong>
-                        <span>portfolio</span>
+                        <strong data-count="7">0</strong>
+                        <span>проверок</span>
                     </div>
                 </div>
                 <div class="pipeline">
-                    <span class="active">Plan</span>
-                    <span class="active">Test</span>
-                    <span>Report</span>
+                    <span class="active">Анализ</span>
+                    <span class="active">Тесты</span>
+                    <span>Отчет</span>
                 </div>
             </div>
         </section>
 
-        <section class="section-band section-reveal" id="frontend">
+        <section class="section-band section-reveal" id="frontend" data-area="frontend">
             <div class="section-heading">
-                <p class="eyebrow">Frontend part</p>
-                <h2>User interface checks</h2>
+                <p class="eyebrow">Фронтенд</p>
+                <h2>Проверки интерфейса</h2>
             </div>
             <div class="feature-grid">
                 <article class="feature-card">
                     <span class="icon">UI</span>
-                    <h3>Layout</h3>
-                    <p>Check that the page is readable, responsive, and visually consistent.</p>
+                    <h3>Верстка</h3>
+                    <p>Проверка адаптивности, читаемости, отступов, кнопок и состояния элементов.</p>
                 </article>
                 <article class="feature-card">
                     <span class="icon">UX</span>
-                    <h3>Interaction</h3>
-                    <p>Validate buttons, navigation links, forms, and user flows.</p>
+                    <h3>Пользовательский путь</h3>
+                    <p>Проверка навигации, кликов, понятности действий и ожидаемого поведения.</p>
                 </article>
                 <article class="feature-card">
                     <span class="icon">A11Y</span>
-                    <h3>Accessibility</h3>
-                    <p>Review contrast, semantic HTML, labels, focus states, and keyboard usage.</p>
+                    <h3>Доступность</h3>
+                    <p>Контраст, фокус, семантика, подписи и удобство работы с клавиатуры.</p>
                 </article>
             </div>
         </section>
 
-        <section class="section-band alt section-reveal" id="backend">
+        <section class="section-band alt section-reveal" id="backend" data-area="backend">
             <div class="section-heading">
-                <p class="eyebrow">Backend part</p>
-                <h2>API and data checks</h2>
+                <p class="eyebrow">Бэкенд</p>
+                <h2>Проверки API и данных</h2>
             </div>
             <div class="split-layout">
                 <div class="api-panel">
@@ -100,7 +103,7 @@
                     </div>
                     <div class="api-line ok">
                         <span>POST /login</span>
-                        <strong>validated</strong>
+                        <strong>валидация</strong>
                     </div>
                     <div class="api-line warn">
                         <span>POST /payment</span>
@@ -108,44 +111,44 @@
                     </div>
                     <div class="api-line fail">
                         <span>GET /missing</span>
-                        <strong>404 tested</strong>
+                        <strong>404 проверен</strong>
                     </div>
                 </div>
                 <div class="text-block">
-                    <h3>What I test on backend</h3>
+                    <h3>Что проверять на бэкенде</h3>
                     <p>
-                        Status codes, error messages, validation rules, response structure,
-                        required fields, and negative scenarios.
+                        Статусы ответа, сообщения об ошибках, обязательные поля, структуру JSON,
+                        негативные сценарии и обработку пустых значений.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section class="section-band section-reveal" id="testing">
+        <section class="section-band section-reveal" id="testing" data-area="testing">
             <div class="section-heading">
-                <p class="eyebrow">Testing part</p>
-                <h2>Automated checks with Jest</h2>
+                <p class="eyebrow">Тестирование</p>
+                <h2>Автотесты на Jest</h2>
             </div>
             <div class="test-list">
                 <article>
                     <span class="status pass"></span>
                     <div>
                         <h3>add()</h3>
-                        <p>Checks that two numbers are added correctly.</p>
+                        <p>Проверяет корректное сложение двух чисел.</p>
                     </div>
                 </article>
                 <article>
                     <span class="status pass"></span>
                     <div>
                         <h3>subtract()</h3>
-                        <p>Checks positive and negative results.</p>
+                        <p>Проверяет положительный и отрицательный результат.</p>
                     </div>
                 </article>
                 <article>
                     <span class="status pass"></span>
                     <div>
                         <h3>divide()</h3>
-                        <p>Checks normal division and division by zero error handling.</p>
+                        <p>Проверяет деление и ошибку при делении на ноль.</p>
                     </div>
                 </article>
             </div>
@@ -153,24 +156,88 @@
 
         <section class="workflow section-reveal" id="workflow">
             <div class="section-heading">
-                <p class="eyebrow">Study workflow</p>
-                <h2>From requirement to bug report</h2>
+                <p class="eyebrow">Рабочий процесс</p>
+                <h2>От требования до баг-репорта</h2>
             </div>
             <div class="timeline">
-                <button class="step is-active" type="button" data-step="Analyze">Analyze</button>
-                <button class="step" type="button" data-step="Design">Design</button>
-                <button class="step" type="button" data-step="Execute">Execute</button>
-                <button class="step" type="button" data-step="Report">Report</button>
+                <button class="step is-active" type="button" data-step="analysis">Анализ</button>
+                <button class="step" type="button" data-step="design">Дизайн тестов</button>
+                <button class="step" type="button" data-step="execute">Выполнение</button>
+                <button class="step" type="button" data-step="report">Отчет</button>
             </div>
             <p class="workflow-note" id="workflow-note">
-                Read requirements and define what should be tested first.
+                Изучить требования и понять, что нужно проверить в первую очередь.
             </p>
+        </section>
+
+        <section class="section-band lab section-reveal" id="lab">
+            <div class="section-heading">
+                <p class="eyebrow">QA-лаборатория</p>
+                <h2>Интерактивная практика</h2>
+            </div>
+
+            <div class="filter-bar" aria-label="Фильтр разделов">
+                <button class="filter-button is-active" type="button" data-filter="all">Все</button>
+                <button class="filter-button" type="button" data-filter="frontend">Фронтенд</button>
+                <button class="filter-button" type="button" data-filter="backend">Бэкенд</button>
+                <button class="filter-button" type="button" data-filter="testing">Тестирование</button>
+            </div>
+
+            <div class="lab-grid">
+                <article class="tool-panel">
+                    <h3>Генератор тест-кейса</h3>
+                    <label for="feature-input">Функция или экран</label>
+                    <input id="feature-input" type="text" value="Форма входа" maxlength="42">
+                    <button class="button primary full" type="button" id="generate-case">Создать тест-кейс</button>
+                    <div class="case-output" id="case-output" aria-live="polite">
+                        Нажмите кнопку, чтобы создать пример тест-кейса.
+                    </div>
+                </article>
+
+                <article class="tool-panel">
+                    <h3>Баг-трекер</h3>
+                    <div class="bug-form">
+                        <input id="bug-input" type="text" placeholder="Например: кнопка не отправляет форму" maxlength="80">
+                        <button class="button secondary" type="button" id="add-bug">Добавить</button>
+                    </div>
+                    <ul class="bug-list" id="bug-list">
+                        <li><span class="priority high">High</span> Ошибка при делении на ноль обработана тестом</li>
+                        <li><span class="priority medium">Medium</span> Проверить адаптивность hero-блока</li>
+                    </ul>
+                </article>
+
+                <article class="tool-panel">
+                    <h3>Чек-лист качества</h3>
+                    <label class="check-row">
+                        <input type="checkbox" checked>
+                        <span>Тесты запускаются через npm test</span>
+                    </label>
+                    <label class="check-row">
+                        <input type="checkbox" checked>
+                        <span>README объясняет проект</span>
+                    </label>
+                    <label class="check-row">
+                        <input type="checkbox">
+                        <span>Добавлены API-тесты</span>
+                    </label>
+                    <label class="check-row">
+                        <input type="checkbox">
+                        <span>Есть баг-репорты с шагами</span>
+                    </label>
+                    <div class="progress-wrap" aria-label="Прогресс чек-листа">
+                        <span id="progress-label">50%</span>
+                        <div class="progress-track">
+                            <div class="progress-bar" id="progress-bar"></div>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <span>Manual QA Portfolio</span>
-        <span>Frontend + Backend + Testing practice</span>
+        <span>Портфолио Manual QA</span>
+        <span>Фронтенд + Бэкенд + Тестирование</span>
     </footer>
 
     <script src="script.js"></script>
